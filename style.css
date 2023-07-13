@@ -58,6 +58,24 @@ body {
   opacity: 0;
 }
 
+.navbar .desktop-view {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  display: none;
+}
+
+.navbar .desktop-view li {
+  list-style: none;
+}
+
+.navbar .desktop-view li .desktop-links {
+  color: var(--clr-white);
+  text-decoration: none;
+  font-family: var(--montserrat);
+  font-weight: 500;
+}
+
 main {
   padding-block: 3.5rem;
   padding-inline: var(--pd-x);
@@ -175,4 +193,23 @@ footer a {
   text-underline-position: under;
   color: var(--clr-gray-light);
   padding-inline: 0.2rem;
+}
+
+@media (width >= 48rem) {
+  :root {
+    --pd-x: 4rem;
+  }
+
+  .navbar .desktop-view {
+    display: flex;
+  }
+
+  .navbar .desktop-view li:first-child a {
+    text-decoration: 2px underline var(--clr-white);
+    text-underline-position: under;
+  }
+
+  .navbar .mobile-view {
+    display: none;
+  }
 }
