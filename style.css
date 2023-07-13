@@ -1,0 +1,52 @@
+:root {
+  --clr-black: #121212;
+  --clr-white: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+.navbar {
+  width: 100vw;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2rem;
+  padding-top: 2.5rem;
+}
+
+.navbar .logo {
+  font-size: 1.25rem;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  text-transform: uppercase;
+  border: 2px solid var(--clr-white);
+  user-select: none;
+}
+
+.navbar .burger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.navbar .burger .burger-lines {
+  width: 2rem;
+  height: 0.2rem;
+  background-color: var(--clr-white);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.navbar .burger:hover .burger-lines:nth-child(odd) {
+  opacity: 0;
+}
