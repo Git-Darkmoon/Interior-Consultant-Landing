@@ -1,6 +1,10 @@
 :root {
   --clr-black: #121212;
   --clr-white: #fafafa;
+  --pd-x:1.3rem;
+  --lora: 'Lora', serif;
+  --crimson: 'Crimson Pro', serif;
+  --montserrat: 'Montserrat', sans-serif;
 }
 
 * {
@@ -20,12 +24,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 2rem;
+  padding-inline: var(--pd-x);
   padding-top: 2.5rem;
 }
 
 .navbar .logo {
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding-block: 0.5rem;
   padding-inline: 1rem;
   text-transform: uppercase;
@@ -50,3 +54,42 @@ body {
 .navbar .burger:hover .burger-lines:nth-child(odd) {
   opacity: 0;
 }
+
+main{
+padding-block:3.5rem;
+padding-inline: var(--pd-x);
+}
+
+.content > *+*{
+  margin-top: 2rem;
+}
+
+.content .title{
+  font-family: var(--lora);
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.content #description{
+  font-family: var(--montserrat);
+  font-weight: 400;
+  font-size: 1rem;
+  width: 55%;
+}
+
+.content button{
+  background-color: transparent;
+  border: none;
+  color:var(--clr-white);
+  width: 10rem;
+  text-align: start;
+  display: flex;
+  gap:0.7rem;
+  font-family: var(--montserrat);
+  font-weight: 700;
+  font-size: 1.2rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+
