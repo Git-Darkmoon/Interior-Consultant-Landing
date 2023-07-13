@@ -8,6 +8,8 @@
   --lora: "Lora", serif;
   --crimson: "Crimson Pro", serif;
   --montserrat: "Montserrat", sans-serif;
+  --szNavBar: 4rem;
+  --szFtr: 3rem;
 }
 
 * {
@@ -23,7 +25,7 @@ body {
 
 .navbar {
   width: 100vw;
-  height: 4rem;
+  height: var(--szNavBar);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,7 +63,7 @@ body {
 .navbar .desktop-view {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 5rem;
   display: none;
 }
 
@@ -178,7 +180,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100vw;
-  height: 3rem;
+  height: var(--szFtr);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,6 +201,15 @@ footer a {
   :root {
     --pd-x: 4rem;
   }
+  main {
+    /* padding-block: 3.5rem;
+    padding-inline: var(--pd-x); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - (calc(var(--szFtr) + var(--szNavBar))));
+    width: 100vw;
+  }
 
   .navbar .desktop-view {
     display: flex;
@@ -208,8 +219,32 @@ footer a {
     text-decoration: 2px underline var(--clr-white);
     text-underline-position: under;
   }
+  .navbar .desktop-view li .desktop-links {
+    font-size: 1rem;
+  }
 
   .navbar .mobile-view {
     display: none;
+  }
+
+  .content .title {
+    font-size: 3.5rem;
+  }
+  
+  .content #description {
+    font-size: 1.2rem;
+    line-height: 29.26px;
+
+  }
+
+  .img-container #living-room {
+    width: 50vmax;
+    height: max-content;
+    padding-top: 1rem;
+    /* aspect-ratio: 4/3; */
+  }
+  .profile-card {
+    bottom: -4rem;
+    right: 28%;
   }
 }
